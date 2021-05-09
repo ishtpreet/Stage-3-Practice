@@ -1,0 +1,7 @@
+<div class="flex-container">
+  <div class="container" *ngFor="let emp of employee">
+      <h4>{{emp.name}}</h4>
+      <h6>Salary:<b>{{emp.salary|currency: 'INR'}}</b></h6> 
+    <a [routerLink]="['/edit-emp',emp.id]">Edit</a>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration of JSON Parse</title>
+</head>
+<body>
+    <script>
+        var myJSONObj = '{ "firstName" : "John", "lastName" : "Stoke", "Salary" : 5000, "isPermanentStaff" : true, "Department" : {"id" : 3, "name" : "Payroll"} , "Skills": [{"id" : 1, "name" : "HTML"}, {"id" : 2, "name" : "CSS"}, {"id" : 3, "name" : "JavaScript"}]}';
+        var myObj = JSON.parse(myJSONObj);
+        console.log("firstName: " + myObj.firstName + "\n"
+            + "lastName: " + myObj.lastName + "\n"
+            + "Salary: " + myObj.Salary + "\n"
+            + "permanentStaff: " + myObj.isPermanentStaff + "\n"
+            + "department id: " + myObj.Department.id + "\n"
+            + "department name: " + myObj.Department.name + "\n"
+            + "Skill 1: " +myObj.Skills[0].id + ", " + myObj.Skills[0].name + "\n"
+            + "Skill 1: " +myObj.Skills[1].id + ", " + myObj.Skills[1].name + "\n"
+            + "Skill 1: " +myObj.Skills[2].id + ", " + myObj.Skills[2].name
+        );
+    </script>
+</body>
+</html>

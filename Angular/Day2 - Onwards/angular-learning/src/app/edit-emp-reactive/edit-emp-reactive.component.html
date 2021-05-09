@@ -1,0 +1,20 @@
+<h1>Reactive Form</h1>
+<form [formGroup] = "empForm">
+    Name: <input type="text" formControlName = "name"/> <br/>
+    Salary: <input type="number" formControlName = "salary"> <br/>
+    Is Permanent or not? <br/>
+    <input type="radio" [value] = "true" formControlName="permanent"/>Yes
+    <input type="radio" [value] = "false" formControlName="permanent"/>No
+    <br/>
+    <div>
+        <h3>Department</h3>
+        <select formControlName = "department_emp">
+            <option *ngFor="let department of departments" [ngValue] = "department"
+                [selected] = "department.id === employee.department_id"
+            >
+            {{department.name}}
+            </option>
+        </select>
+    </div>
+    <button type="submit" (click)="onSubmit()" [disabled]="!empForm.valid"> Save </button>
+</form>

@@ -1,0 +1,34 @@
+<h3 style="text-align:center">Actions, the User can perform</h3>
+
+<button (click)="viewUsers()">View User Details</button>
+<br/>
+<button (click)="addUser()">Add a new User</button>
+<br/>
+<button (click)="deleteUser()">Delete an User</button>
+<br/>
+<button (click)="updateUser()">Update User Details</button>
+<br/>
+<button (click)="register()">Invalid Request.. Register an User</button>
+
+  <div *ngIf="viewStatus">
+  <h3>List of Users</h3>  
+  <div *ngFor="let user of users" class="block">
+    {{user | json}}
+  </div>
+</div>
+
+  <div *ngIf="addStatus">
+  <h3>List of Users after adding:-</h3>  
+  <div *ngFor="let user of users" class="block">
+    {{user | json}}
+  </div>
+</div>
+
+
+  <div class="block" *ngIf="deleteStatus">
+  <h3>User Details is deleted!!!</h3>
+</div>
+
+  <div class="block" *ngIf="updateStatus">
+  <h3>User details is updated.</h3>  
+</div>

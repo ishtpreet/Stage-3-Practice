@@ -1,0 +1,12 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+h1 label{
+    font-weight: bold;
+}
+p{
+    color: red;
+}
+.block {
+    float:left;
+    width:33%    
+}

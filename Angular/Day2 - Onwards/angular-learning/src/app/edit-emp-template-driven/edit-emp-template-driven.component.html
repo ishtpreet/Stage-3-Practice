@@ -1,0 +1,73 @@
+<h1>Edit Employee</h1>
+<!--
+    <form #empForm = "ngForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)] = "employee.name" #name="ngModel"
+         required minlength="2" maxlength="10" > {{ name.value }}
+        <div *ngIf="name.errors?.required">
+            <p>Name field is required.</p>
+        </div>
+        <div *ngIf="name.errors?.minlength">
+            <p>Name must at least have 2 characters.</p>
+        </div>
+        <div *ngIf="name.errors?.maxlength">
+            <p>Name must at most have 10 characters.</p>
+        </div>
+            <div>name.invalid - {{name.invalid}}</div>
+            <div>name.touched - {{name.touched}}</div>
+            <div>name.dirty - {{name.dirty}}</div>
+            <div>name.errors.required - {{name.errors?.required}}</div>
+            <div>name.errors.minlength - {{name.errors?.minlength | json}}</div>
+</form>
+-->
+
+<form #empForm = "ngForm" class="block">
+    Name:
+    <input type="text" 
+        name="name" 
+        [(ngModel)] = "emp.name"
+        #name = "ngModel"
+        minlength="2"
+        maxlength="10"
+        required
+    /> {{name.value}}
+
+    <p *ngIf="name.errors?.required">
+        Name field is required.
+    </p>
+    <p *ngIf="name.errors?.minlength">
+        Name must be at least 2 characters long.
+    </p>
+    <br/>
+    Salary:
+    <input type="number" name="salary" [(ngModel)] = "emp.salary" #salary = "ngModel" required /> {{salary.value}}
+    <p *ngIf="salary.errors?.required">
+        Salary is required.
+    </p>
+    <br/>
+    Is Permanent or Not?
+    <br/>
+    <input type="radio" name="permanent" [(ngModel)] = "emp.isPermanent" [value] = "true"/> Yes
+    <input type="radio" name="permanent" [(ngModel)] = "emp.isPermanent" [value] = "false"/> No
+    <br/>
+
+    Department:
+    <select name="select" [(ngModel)] = "employee.departmentId" #select="ngModel">
+        <option *ngFor = "let department of departments" [ngValue]="department" 
+        [selected] = "department.id === employee.departmentId">
+            {{department.name}}
+        </option>
+    </select>
+    <br/>
+    <button type="submit" (click)="onSubmit()" [disabled]="!empForm.valid">Save</button>
+</form>
+
+<div class="block">
+    <strong>Employee Model</strong><br>
+    <pre>{{emp | json }}</pre>    
+</div>
+
+<div class="block">
+    <strong>Angular Generated Form Model</strong><br>
+    <pre>{{empForm.value | json}}</pre>    
+</div>

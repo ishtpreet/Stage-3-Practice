@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get JSON data</title>
+</head>
+<body>
+    <h2>Convert a string written in JSON format, into a JavaScript object.</h2>
+    <p id="demo"></p>
+
+    <script>
+        //If you receive data in JSON format, you can convert it into a JavaScript object:
+        //This is our JSON data
+        var myJSON = '{ "name" : "Vikrant","age" : 21,"city": "Lucknow" }';
+        //Convert JSON to Object using parse method
+        var myObj = JSON.parse(myJSON);
+        //Show the result on p tag with id="demo"
+        document.getElementById("demo").innerHTML = myObj.name + " of age " + myObj.age + " is from " + myObj.city + ".";
+    </script>
+</body>
+</html>

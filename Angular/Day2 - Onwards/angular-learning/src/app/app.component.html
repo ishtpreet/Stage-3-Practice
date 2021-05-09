@@ -1,0 +1,34 @@
+<nav>
+    <ul>
+        <h1>Angular Learning</h1>
+        <li><a routerLink="/view-emp" routerLinkActive="active">View Employee</a></li>
+        <li><a routerLink="/edit-emp" routerLinkActive="active">Edit Employee</a></li>
+        <li><a routerLink="/quantity-increment" routerLinkActive="active">Quantity Increment</a></li>
+        <li><a routerLink="/edit-emp-template-driven" routerLinkActive="active">Edit Employee(Template Driven)</a></li>
+        <li><a routerLink="/edit-emp-reactive" routerLinkActive="active">Edit Employee(Reactive Using FormGroup)</a></li>
+        <li><a routerLink="/edit-emp-form-builder" routerLinkActive="active">Edit Employee(Reactive Using Form Builder</a></li>
+        <li><a routerLink="/employee-list" routerLinkActive="active">Show Employees</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li><a routerLink="/user" routerLinkActive="active">User Details</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+<!--
+<h1>Angular Learning</h1>
+<h2>Employee Details</h2>
+<h2>ID: {{ id }}</h2>
+<h2>Name: {{ name }}</h2>
+<h2>Salary: {{ salary | currency: 'INR' }}</h2>
+<h2 *ngIf="isPermanent == true">Permanent: {{ isPermanent }}</h2>
+<h2>Department Id: {{ department_id }}</h2>
+<h2>Department Name: {{ department_name }}</h2>
+<table>
+    <h2>Skills</h2>
+    <tr>
+        <td>Skill Id</td>
+        <td>Skill Name</td>
+    </tr>
+    <tr *ngFor = "let skill of skillArray">{{skill.id}} {{skill.name}}</tr>
+</table>
+<h2>Date of Birth: {{ dob | date: 'mediumDate' }}</h2>
+-->

@@ -1,0 +1,19 @@
+<p>view-emp works!</p>
+
+<h1>Employee Details</h1>
+<h1>ID: {{ id }}</h1>
+<h1>Name: {{ name }}</h1>
+<!--Showing currency in INR using CurrencyPipe-->
+<h1>Salary: {{ salary | currency: 'INR' }}</h1>
+<h1 *ngIf="isPermanent == true">Permanent: {{ isPermanent }}</h1>
+<h1>Department Id: {{ department_id }}</h1>
+<h1>Department Name: {{ department_name }}</h1>
+<table>
+    <h1>Skills</h1>
+    <tr>
+        <td>Skill Id</td>
+        <td>Skill Name</td>
+    </tr>
+    <tr *ngFor = "let skill of skillArray">{{skill.id}} {{skill.name}}</tr>
+</table>
+<h1>Date of Birth: {{ dob | date: 'mediumDate' }}</h1>

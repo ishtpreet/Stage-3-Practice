@@ -1,0 +1,24 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid black;
+}
+body { 
+    margin: 0;
+    font-family: Segoe UI, Arial
+} 
+a:visited 
+{ 
+    color: blue 
+} 
+a 
+{ 
+    text-decoration: none 
+} 
+.active-link { 
+    border-bottom: Solid 1px blue 
+}
