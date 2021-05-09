@@ -1,5 +1,5 @@
 # Contents of this repo
 - Spring JPA -> HandsOn
-- Lombok Sonar
-- Practice Check
-- Angular HandsOn
+- Lombok Sonar -> HandsOn
+- Practice Check -> Case Study
+- Angular -> HandsOn
