@@ -3,3 +3,4 @@
 - Lombok Sonar -> HandsOn
 - Practice Check -> Case Study
 - Angular -> HandsOn
+- Hibernate is optional
